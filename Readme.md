@@ -94,19 +94,3 @@ Referral-ready Jobs + Drafts
 
 ---
 
-## 🗃️ Data Model (Core Tables)
-
-### `users`
-Stores user identity and preferences.
-
-### `jobs`
-Stores normalized job postings with deduplication (`jobHash` unique).
-
-### `connections`
-Stores user-imported network data (CSV-based safe LinkedIn integration).
-
-### `job_matches`
-Stores job ↔ connection matches for referral discovery.
-
-### `outreach_drafts`
-Stores AI-generated referral message drafts.
