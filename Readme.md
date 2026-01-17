@@ -1,109 +1,112 @@
-JobPulse 🚀
-AI-Powered Job Aggregator & Intelligent Referral Assistant
+# JobPulse 🚀  
+## AI-Powered Job Aggregator & Intelligent Referral Assistant (Backend-First)
 
-JobPulse is a backend-first platform designed to streamline the job hunt. It automates the chaos of checking multiple job boards, intelligently filters opportunities using AI, and—most importantly—leverages your existing professional network to surface referral opportunities automatically.
+JobPulse is a backend-first platform built to simplify and optimize the job hunt.
 
-Unlike generic scrapers, JobPulse focuses on the "Hidden Job Market" strategy by prioritizing jobs where the user already has a connection.
+Instead of wasting time manually checking multiple job boards every day, JobPulse **automatically aggregates job postings**, enriches them using AI (summary + skill tags + relevance scoring), and most importantly, helps users leverage the **hidden job market** by prioritizing jobs where the user already has a **network connection**.
 
-✨ Key Features
-1. 🕷️ Multi-Source Job Scraping
+This project is designed to be **practical, scalable, and system-design friendly**, focusing heavily on clean architecture, data consistency, and automation.
 
-Scrapes jobs from static job boards (e.g., RemoteOK, WeWorkRemotely) using Jsoup.
+---
 
-Normalizes data (Title, Company, Location, Description) into a unified schema.
+## ✨ Key Features
 
-Deduplication Engine: Uses a content-hashing algorithm to prevent storing duplicate listings across different days or sources.
+### 1) 🕷️ Multi-Source Job Aggregation
+- Scrapes job listings from **static job boards** (ex: RemoteOK, WeWorkRemotely) using **Jsoup**
+- Normalizes job data into a unified schema:
+  - `Title`, `Company`, `Location`, `Description`, `Apply Link`, `Source`
+- Built-in **Deduplication Engine**
+  - Generates a stable `jobHash` to prevent saving duplicate jobs across runs/days/sources
+  - Ensures idempotent behavior (running scrapers multiple times does not create duplicates)
 
-2. 🤝 The "Network Matcher" (Unique Feature)
+---
 
-LinkedIn Integration (Safe Mode): Allows users to upload their LinkedIn connections via CSV export (no risky bot scraping).
+### 2) 🤝 The Network Matcher (Unique Feature)
+JobPulse focuses on “referral-first” discovery.
 
-Relational Matching: When a new job is found, the system queries the Connections database to see if the user knows anyone at that company.
+Instead of just listing jobs, it automatically highlights jobs where:
+✅ the user already knows someone in that company
 
-Fuzzy Matching: Handles variations in company names (e.g., matching "Google India" job to a connection at "Google LLC").
+**LinkedIn Integration (Safe Mode):**
+- Users upload their LinkedIn connections via **CSV export**  
+- No unsafe automation / no scraping LinkedIn profiles
 
-3. 🧠 AI Enrichment Layer
+**Matching Engine:**
+- When a new job is ingested, JobPulse matches it against the user’s connections database
+- Supports fuzzy matching for company name variations:
+  - `"Google India"` → `"Google LLC"`
+  - `"Amazon Web Services"` → `"Amazon"`
 
-Smart Summaries: Compresses lengthy JDs into 2-line executive summaries.
+Output:
+- **Referral-ready jobs feed** (jobs where a matching connection exists)
 
-Relevance Scoring: Assigns a score (0-100) based on the user's tech stack (e.g., High score if JD mentions "Spring Boot" and "Kafka").
+---
 
-Referral Draft Generator: If a connection is found, the AI generates a personalized cold-message draft tailored to that specific connection and job role, ready for the user to send.
+### 3) 🧠 AI Enrichment Layer
+JobPulse adds practical AI features that improve decision-making:
 
-4. 📧 Personalized Daily Digests
+✅ **Smart Summaries**  
+Turns long job descriptions into a short 2-line summary.
 
-Sends a single email every morning (via Spring Scheduler).
+✅ **Relevance Scoring (0–100)**  
+Scores each job based on user preferences (skills/roles), e.g.:
+- Higher score if JD includes: `Spring Boot`, `Kafka`, `Redis`
 
-Priority Sorting: Jobs with User Connections appear at the top, followed by High Relevance Score jobs.
+✅ **Referral Draft Generator**  
+If a connection match exists, JobPulse generates a personalized referral message draft:
+- tailored to the job + connection
+- ready to copy/send by the user
 
-Includes "One-Click" links to apply or reach out to connections.
+---
 
-🛠️ Tech Stack
-Component	Technology	Description
-Backend	Java 17, Spring Boot	Core REST API & Business Logic
-Database	PostgreSQL	Relational storage for Jobs, Users, and Connections
-Scraping	Jsoup	HTML parsing and extraction
-Scheduling	Spring @Scheduled	CRON jobs for scraping and email dispatch
-AI/LLM	OpenAI API / Gemini	Text summarization and message generation
-Data Processing	OpenCSV	High-performance CSV parsing for bulk contact uploads
-Containerization	Docker	Easy deployment and environment consistency
-🧩 System Architecture
-Code snippet
-graph TD
-    A[Scheduler] -->|Trigger| B(Job Scraper Service)
-    B -->|Fetch HTML| C{Job Boards}
-    B -->|Parse & Hash| D[(PostgreSQL - Jobs)]
-    
-    E[User] -->|Uploads Connections.csv| F(CSV Parser Service)
-    F -->|Normalize & Save| G[(PostgreSQL - Connections)]
-    
-    H[AI Service] -->|Enrich| D
-    
-    I[Digest Service] -->|1. Fetch New Jobs| D
-    I -->|2. Check for Connections| G
-    I -->|3. Generate Referral Drafts| H
-    I -->|4. Send Email| J(SMTP Server)
-    J -->|Daily Digest| E
-🚀 Technical Highlights (Why this project matters)
-Complex Data Relationships: Implements a normalized Many-to-Many relationship between Users, Jobs, and Connections.
+## 🏗️ Architecture Overview
 
-Asynchronous Processing: Scraping and AI enrichment happen asynchronously to prevent blocking the main thread.
+JobPulse is built as a clean pipeline:
 
-Bulk Data Handling: efficiently processes thousands of LinkedIn connections from CSV imports without memory overflows.
+1. **Scrape jobs** from sources  
+2. **Normalize + Deduplicate** listings  
+3. **Persist jobs** in PostgreSQL  
+4. **Enrich jobs using AI** (summary + tags + score)  
+5. **Match jobs with user’s connections**  
+6. Generate **referral outreach drafts**
 
-Fault Tolerance: Implements retry logic for scraping failures and API rate limits.
+### High-Level Flow
+Scrapers → Raw Jobs → Ingestion Service → DB
+↓
+AI Enrichment
+↓
+Connection Matching Engine
+↓
+Referral-ready Jobs + Drafts
 
-🏃 Getting Started
-Prerequisites
 
-Java 17+
+---
 
-PostgreSQL
+## 🛠️ Tech Stack
 
-Maven
+- **Backend:** Spring Boot (Java)
+- **Scraping:** Jsoup (Static HTML scraping)
+- **Database:** PostgreSQL
+- **Containerization:** Docker Compose
+- **Scheduling:** Spring Scheduler (`@Scheduled`)
+- **Email Digests:** JavaMailSender *(planned/optional)*
+- **AI Layer:** OpenAI API / LLM API *(pluggable)*
 
-OpenAI API Key (or alternative LLM)
+---
 
-Installation
+## 🗃️ Data Model (Core Tables)
 
-Clone the repo
+### `users`
+Stores user identity and preferences.
 
-Bash
-git clone https://github.com/mehulljainn08/JobPulse.git
-cd JobPulse
-Configure Database Update src/main/resources/application.properties:
+### `jobs`
+Stores normalized job postings with deduplication (`jobHash` unique).
 
-Properties
-spring.datasource.url=jdbc:postgresql://localhost:5432/jobpulse
-spring.datasource.username=your_user
-spring.datasource.password=your_password
-openai.api.key=your_api_key
-Run the Application
+### `connections`
+Stores user-imported network data (CSV-based safe LinkedIn integration).
 
-Bash
-mvn spring-boot:run
-Load Connections
+### `job_matches`
+Stores job ↔ connection matches for referral discovery.
 
-Export connections from LinkedIn (Settings -> Data Privacy -> Get a copy of your data).
-
-Use the API endpoint /api/connections/upload to upload the CSV.
+### `outreach_drafts`
+Stores AI-generated referral message drafts.
