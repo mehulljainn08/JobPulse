@@ -44,7 +44,7 @@ public class Job {
     private boolean active = true;
 
 
-    @Column(nullable = false, unique = true)
+    @Column(name = "job_hash", unique = true)
     private String jobHash;
 
 

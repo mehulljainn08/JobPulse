@@ -23,10 +23,10 @@ public class RemoteOKScraper implements JobScraper {
         List<Job> jobList = new ArrayList<>();
 
         try {
-            // 1. Fetch the RSS Feed (XML)
+
             Document doc = Jsoup.connect(url)
                     .userAgent("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36")
-                    .parser(Parser.xmlParser()) // IMPORTANT: Use XML Parser
+                    .parser(Parser.xmlParser())
                     .timeout(10000)
                     .get();
 
@@ -34,7 +34,7 @@ public class RemoteOKScraper implements JobScraper {
             Elements items = doc.select("item");
 
             for (Element item : items) {
-                // 3. Extract Data from XML tags
+                //  extract data from XML tags
                 String title = item.select("title").text();
                 String link = item.select("link").text();
                 String description = item.select("description").text();
