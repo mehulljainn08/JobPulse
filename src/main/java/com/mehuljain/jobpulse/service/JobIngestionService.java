@@ -8,7 +8,9 @@ import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
+import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationEventPublisher;
+import org.springframework.context.event.EventListener;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
@@ -25,8 +27,8 @@ public class JobIngestionService {
 
     private final ApplicationEventPublisher eventPublisher;
 
+    @EventListener(ApplicationReadyEvent.class)
     @Scheduled(cron="0 0 */4 * * *")// every 4 hours
-
     public void runIngestion(){
         log.info("Starting Job Ingestion service");
 
