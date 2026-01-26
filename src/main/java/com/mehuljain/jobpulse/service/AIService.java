@@ -22,7 +22,7 @@ public class AIService {
         // Build the manual instance using your key
         this.chatModel = GoogleAiGeminiChatModel.builder()
                 .apiKey(googleApiKey)
-                .modelName("gemini-1.5-flash")
+                .modelName("gemini-flash-latest")
                 .temperature(0.7)
                 .build();
     }
