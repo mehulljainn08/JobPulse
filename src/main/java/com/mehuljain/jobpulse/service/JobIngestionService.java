@@ -27,6 +27,8 @@ public class JobIngestionService {
 
     private final ApplicationEventPublisher eventPublisher;
 
+    private final AIService aiService;
+
     @EventListener(ApplicationReadyEvent.class)
     @Scheduled(cron="0 0 */4 * * *")// every 4 hours
     public void runIngestion(){
@@ -61,6 +63,12 @@ public class JobIngestionService {
         }
 
         try {
+
+            try{
+                Thread.sleep(5000); // 1 second delay between AI calls
+            }catch (InterruptedException e){}
+            String aiSummary = aiService.analyzeJob(job.getJobTitle(), job.getCompanyName(), job.getJobDescription());
+            job.setAiSummary(aiSummary);
             Job savedJob = jobRepository.save(job);
 
             eventPublisher.publishEvent(new JobSavedEvent(savedJob));
