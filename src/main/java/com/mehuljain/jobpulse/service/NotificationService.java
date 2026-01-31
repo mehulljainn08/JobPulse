@@ -98,29 +98,51 @@ public class NotificationService {
 
         html.append("<table style='border-collapse: collapse; width: 100%; border: 1px solid #ddd;'>");
         html.append("<tr style='background-color: #f2f2f2;'>");
-        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 20%;'>Role</th>");
-        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 15%;'>Company</th>");
-        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 50%;'>AI Summary</th>");
-        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 15%;'>Link</th>");
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 25%;'>Role & Company</th>"); // Combined col
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 60%;'>AI Insights</th>");
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 15%;'>Action</th>");
         html.append("</tr>");
 
         for (Job job : jobs) {
             html.append("<tr>");
-            html.append("<td style='padding: 10px; border: 1px solid #ddd;'><b>").append(job.getJobTitle()).append("</b></td>");
-            html.append("<td style='padding: 10px; border: 1px solid #ddd;'>").append(job.getCompanyName()).append("</td>");
 
-            String summary = (job.getAiSummary() != null && !job.getAiSummary().isEmpty())
-                    ? job.getAiSummary()
-                    : "<i>Analysis Pending...</i>";
+            // Col 1: Role & Company
+            html.append("<td style='padding: 10px; border: 1px solid #ddd;'>")
+                    .append("<div style='font-size:16px; font-weight:bold;'>").append(job.getJobTitle()).append("</div>")
+                    .append("<div style='color:#555;'>").append(job.getCompanyName()).append("</div>")
+                    .append("<div style='font-size:12px; color:#777;'>").append(job.getLocation()).append("</div>")
+                    .append("</td>");
 
-            html.append("<td style='padding: 10px; border: 1px solid #ddd; font-size: 14px;'>").append(summary).append("</td>");
-            html.append("<td style='padding: 10px; border: 1px solid #ddd; text-align: center;'><a href='").append(job.getApplyUrl()).append("' style='background-color: #28a745; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;'>Apply</a></td>");
+
+            String summary = (job.getAiSummary() != null) ? job.getAiSummary() : "Analysis Pending...";
+
+
+            StringBuilder badges = new StringBuilder();
+            if (job.getTechStack() != null) {
+                for (String tech : job.getTechStack()) {
+                    badges.append("<span style='background:#e1ecf4; color:#0052cc; padding:2px 8px; border-radius:12px; font-size:11px; margin-right:5px; display:inline-block; margin-bottom:3px;'>")
+                            .append(tech)
+                            .append("</span>");
+                }
+            }
+
+            html.append("<td style='padding: 10px; border: 1px solid #ddd;'>")
+                    .append("<div style='margin-bottom:8px;'>").append(summary).append("</div>")
+                    .append("<div>").append(badges).append("</div>") // Badges here!
+                    .append("</td>");
+
+            // Col 3: Button
+            html.append("<td style='padding: 10px; border: 1px solid #ddd; text-align: center;'>");
+            html.append("<a href='").append(job.getApplyUrl()).append("' style='background-color: #007bff; color: white; padding: 8px 15px; text-decoration: none; border-radius: 5px; font-weight:bold;'>Apply</a>");
+            html.append("</td>");
+
             html.append("</tr>");
         }
 
         html.append("</table>");
-        html.append("<p style='font-size: 12px; color: #666;'>JobPulse AI Agent • Automated Digest</p>");
+        html.append("<p style='font-size: 12px; color: #666; margin-top:20px;'>JobPulse AI Agent • Automated Digest</p>");
         html.append("</body></html>");
         return html.toString();
     }
+
 }

@@ -1,10 +1,10 @@
 package com.mehuljain.jobpulse.service;
 
+import com.mehuljain.jobpulse.dto.JobInsight;
 import com.mehuljain.jobpulse.entity.Job;
 import com.mehuljain.jobpulse.event.JobSavedEvent;
 import com.mehuljain.jobpulse.repository.JobRepository;
 import com.mehuljain.jobpulse.scraper.JobScraper;
-import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.codec.digest.DigestUtils;
@@ -21,64 +21,75 @@ import java.util.List;
 @RequiredArgsConstructor
 @Slf4j
 public class JobIngestionService {
+
     private final JobRepository jobRepository;
-
     private final List<JobScraper> scrapers;
-
     private final ApplicationEventPublisher eventPublisher;
-
     private final AIService aiService;
 
     @EventListener(ApplicationReadyEvent.class)
-    @Scheduled(cron="0 0 */4 * * *")// every 4 hours
+    @Scheduled(cron="0 0 */4 * * *")
     public void runIngestion(){
-        log.info("Starting Job Ingestion service");
+        log.info("🚀 Starting Job Ingestion...");
 
-        for(JobScraper scraper:scrapers){
-
-            try{
-                List<Job> jobs= scraper.getJobs();
-
-                for(Job job:jobs){
+        for(JobScraper scraper : scrapers){
+            try {
+                List<Job> jobs = scraper.getJobs();
+                for(Job job : jobs){
                     processJob(job);
                 }
-            }catch (Exception e){
-                log.error("Error during job scraping from {}: {}", scraper.getClass().getSimpleName(), e.getMessage());
+            } catch (Exception e){
+                log.error("Scraper Error {}: {}", scraper.getClass().getSimpleName(), e.getMessage());
             }
         }
-
-
-        log.info("Finished Job Ingestion service");
+        log.info("Job Ingestion Finished.");
     }
-
 
     private boolean processJob(Job job) {
         String rawKey = (job.getJobTitle() + job.getCompanyName() + job.getLocation()).toLowerCase();
         String hash = DigestUtils.sha256Hex(rawKey);
         job.setJobHash(hash);
 
-
         if (jobRepository.existsByJobHash(hash)) {
             return false;
         }
 
         try {
+            // 5 seconds for rate limits
+            try { Thread.sleep(5000); } catch (InterruptedException e) {}
 
-            try{
-                Thread.sleep(5000); // 1 second delay between AI calls
-            }catch (InterruptedException e){}
-            String aiSummary = aiService.analyzeJob(job.getJobTitle(), job.getCompanyName(), job.getJobDescription());
-            job.setAiSummary(aiSummary);
+
+            String fullDescription = String.format("Title: %s\nCompany: %s\nDescription: %s",
+                    job.getJobTitle(), job.getCompanyName(), job.getJobDescription());
+
+
+            try {
+                log.info("Analyzing: {}...", job.getJobTitle());
+                JobInsight insight = aiService.analyzeJob(fullDescription);
+
+
+                job.setAiSummary(insight.summary());
+                job.setTechStack(insight.techStack());
+                job.setExperienceLevel(insight.experienceLevel());
+                job.setRemote(insight.isRemote());
+                job.setSalaryRange(insight.salaryRange());
+
+            } catch (Exception e) {
+                log.warn("⚠️ AI Failed for '{}': {}. Saving without AI data.", job.getJobTitle(), e.getMessage());
+                job.setAiSummary("Analysis Pending");
+                job.setTechStack(List.of("N/A"));
+            }
+
+
             Job savedJob = jobRepository.save(job);
-
             eventPublisher.publishEvent(new JobSavedEvent(savedJob));
             return true;
 
         } catch (DataIntegrityViolationException e) {
-            log.warn("Duplicate job caught by DB: {}", job.getJobTitle());
             return false;
         }
     }
+
 
 
 }

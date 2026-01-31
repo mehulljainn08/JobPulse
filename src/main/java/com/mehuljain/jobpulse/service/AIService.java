@@ -1,60 +1,25 @@
 package com.mehuljain.jobpulse.service;
 
-import dev.langchain4j.model.chat.ChatLanguageModel;
-import dev.langchain4j.model.googleai.GoogleAiGeminiChatModel;
-import jakarta.annotation.PostConstruct;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.stereotype.Service;
-import lombok.extern.slf4j.Slf4j;
+import com.mehuljain.jobpulse.dto.JobInsight; // Make sure you created this Record!
+import dev.langchain4j.service.SystemMessage;
+import dev.langchain4j.service.UserMessage;
+import dev.langchain4j.service.spring.AiService;
 
-@Service
-@Slf4j
-public class AIService {
+// We use the Interface approach (The "Magic" way)
+// simpler and more powerful than the manual class you wrote.
+@AiService
+public interface AIService {
 
-    // Injecting the key from application.properties
-    @Value("${spring.ai.google.genai.api-key}")
-    private String googleApiKey;
-
-    private ChatLanguageModel chatModel;
-
-    @PostConstruct
-    public void init() {
-        // Build the manual instance using your key
-        this.chatModel = GoogleAiGeminiChatModel.builder()
-                .apiKey(googleApiKey)
-                .modelName("gemini-flash-latest")
-                .temperature(0.7)
-                .build();
-    }
-
-    public String analyzeJob(String jobTitle, String company, String rawDescription) {
-
-        // 1. The Prompt: We ask for HTML so it fits in the email table
-        String prompt = String.format("""
-            Analyze this job description for a software role.
-            
-            Job: %s at %s
-            Description: %s
-            
-            Instructions:
-            1. Summarize the role in 2 sentences.
-            2. List the key Tech Stack.
-            3. Return ONLY a valid HTML <ul> list.
-            4. Format:
-               <ul>
-                 <li><b>Summary:</b> [Your summary]</li>
-                 <li><b>Tech Stack:</b> [Java, React, etc]</li>
-               </ul>
-            """, jobTitle, company, rawDescription);
-
-        try {
-
-            String response = chatModel.generate(prompt);
-            return response;
-
-        } catch (Exception e) {
-            log.error("AI Error for {}: {}", jobTitle, e.getMessage());
-            return "<ul><li><b>Status:</b> AI Summary Unavailable</li></ul>";
-        }
-    }
+    @SystemMessage("""
+        You are an expert technical recruiter.
+        Analyze the job description and extract structured insights.
+        
+        Rules:
+        1. summary: A 2-sentence professional summary.
+        2. techStack: Extract specific technologies (e.g., "Java", "Spring", "AWS"). Max 5 items.
+        3. experienceLevel: Infer JUNIOR, MID, SENIOR, or INTERN.
+        4. isRemote: true only if explicitly stated.
+        5. salaryRange: Extract if present, else "Not Disclosed".
+    """)
+    JobInsight analyzeJob(@UserMessage String jobDescription);
 }
