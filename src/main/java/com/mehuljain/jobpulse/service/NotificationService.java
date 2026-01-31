@@ -16,8 +16,6 @@ import jakarta.mail.internet.MimeMessage;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.BlockingQueue;
-import java.util.concurrent.LinkedBlockingQueue;
 
 @Service
 @Slf4j
@@ -30,32 +28,42 @@ public class NotificationService {
     @Value("${spring.mail.username}")
     private String senderEmail;
 
-    // 🛑 CHANGE: Use BlockingQueue instead of List
-    // This is designed exactly for "buffering" tasks safely.
-    private final BlockingQueue<Job> jobBuffer = new LinkedBlockingQueue<>();
+
+    private final List<Job> jobBuffer = new ArrayList<>();
 
     @EventListener
     public void handleNewJob(JobSavedEvent event) {
-        jobBuffer.add(event.getJob());
-        log.info("Buffered job: {}. Total pending: {}", event.getJob().getJobTitle(), jobBuffer.size());
+
+        synchronized (jobBuffer) {
+            jobBuffer.add(event.getJob());
+            log.info("Buffered job: {}. Total pending: {}", event.getJob().getJobTitle(), jobBuffer.size());
+        }
     }
 
-    @Scheduled(fixedRate = 600000) // Runs every 10 minutes
+    @Scheduled(fixedRate = 600000)
     public void sendBufferedJobs() {
+
+
         if (jobBuffer.isEmpty()) {
             return;
         }
 
+        List<Job> batchToSend;
 
-        // It clears the buffer as it moves them, leaving zero gaps for data loss.
-        List<Job> batchToSend = new ArrayList<>();
-        jobBuffer.drainTo(batchToSend);
+
+        synchronized (jobBuffer) {
+            if (jobBuffer.isEmpty()) {
+                return;
+            }
+            batchToSend = new ArrayList<>(jobBuffer);
+            jobBuffer.clear();
+        }
+
 
         int jobCount = batchToSend.size();
         log.info("Creating digest email for {} jobs...", jobCount);
 
         List<User> users = userRepository.findAll();
-
         String emailBody = buildHtmlEmail(batchToSend);
 
         for (User user : users) {
