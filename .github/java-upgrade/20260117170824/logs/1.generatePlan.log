@@ -1,0 +1,831 @@
+2026-01-17T17:08:24.179Z [INFO] Initializing project configuration...
+2026-01-17T17:08:24.179Z [INFO] Project /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse is a maven project, try to get java version from pom.xml
+2026-01-17T17:08:24.180Z [INFO] Project java version: 17
+2026-01-17T17:08:24.180Z [INFO] Maven project detected.
+2026-01-17T17:08:24.180Z [INFO] Build tool type: mvnw
+2026-01-17T17:08:24.203Z [INFO] [Environment] Running command (Java 17): java -version
+openjdk version "17.0.16" 2025-07-15
+OpenJDK Runtime Environment Temurin-17.0.16+8 (build 17.0.16+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.16+8 (build 17.0.16+8, mixed mode, sharing)
+2026-01-17T17:08:24.351Z [INFO] [JdkEnvironment] Got real Java version: 17.0.16
+2026-01-17T17:08:24.351Z [INFO] JDK: {
+  "name": "java",
+  "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin",
+  "version": "17"
+}
+2026-01-17T17:08:24.352Z [INFO] [Environment] Running command (Java 17): mvnw --version
+Apache Maven 3.9.12 (848fbb4bf2d427b72bdb2471c22fced7ebd9a7a1)
+Maven home: /Users/mehuljain/.m2/wrapper/dists/apache-maven-3.9.12/6068d197
+Java version: 17.0.16, vendor: Eclipse Adoptium, runtime: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "mac os x", version: "26.2", arch: "aarch64", family: "mac"
+2026-01-17T17:08:24.701Z [INFO] Real build tool version: 3.9.12
+2026-01-17T17:08:24.701Z [INFO] Build tool: {
+  "name": "mvnw",
+  "path": ".",
+  "version": "3.9.12"
+}
+2026-01-17T17:08:24.701Z [INFO] Project config: {
+  "buildTool": {
+    "path": ".",
+    "name": "mvnw",
+    "version": "3.9.12"
+  },
+  "jdk": {
+    "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "JobPulse",
+  "dir": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse"
+}
+2026-01-17T17:08:24.701Z [INFO] Project configuration initialized: {
+  "buildTool": {
+    "path": ".",
+    "name": "mvnw",
+    "version": "3.9.12"
+  },
+  "jdk": {
+    "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "JobPulse",
+  "dir": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse"
+}
+2026-01-17T17:08:24.701Z [INFO] Initializing upgrade goals...
+2026-01-17T17:08:24.702Z [INFO] [Environment] Running command (Java 17): mvnw dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.mehuljain:jobpulse >-----------------------
+[INFO] Building jobpulse 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ jobpulse ---
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.pom (1.4 kB at 8.7 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.0.0/doxia-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia/2.0.0/doxia-2.0.0.pom (17 kB at 555 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/junit/junit-bom/5.11.1/junit-bom-5.11.1.pom (5.6 kB at 188 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.pom (8.8 kB at 209 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.pom (5.8 kB at 74 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/2.0.0/doxia-sitetools-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sitetools/2.0.0/doxia-sitetools-2.0.0.pom (12 kB at 107 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.pom (3.9 kB at 91 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-io/commons-io/2.17.0/commons-io-2.17.0.pom (20 kB at 426 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/74/commons-parent-74.pom (78 kB at 2.5 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.pom (20 kB at 640 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.pom (7.8 kB at 287 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.pom (7.4 kB at 284 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.pom (3.0 kB at 108 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.pom (2.9 kB at 104 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/2.0.0/doxia-modules-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-modules/2.0.0/doxia-modules-2.0.0.pom (2.5 kB at 93 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.pom (4.1 kB at 110 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/19/plexus-19.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/19/plexus-19.pom (25 kB at 705 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.pom (12 kB at 333 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.4/velocity-engine-parent-2.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.4/velocity-engine-parent-2.4.pom (9.5 kB at 250 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.pom (2.6 kB at 73 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-parent/3.1/velocity-tools-parent-3.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-parent/3.1/velocity-tools-parent-3.1.pom (8.0 kB at 211 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/4/velocity-master-4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-master/4/velocity-master-4.pom (7.8 kB at 199 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.pom (10 kB at 291 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.3/velocity-engine-parent-2.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-parent/2.3/velocity-engine-parent-2.3.pom (14 kB at 384 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-api/1.7.30/slf4j-api-1.7.30.pom (3.8 kB at 104 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/slf4j/slf4j-parent/1.7.30/slf4j-parent-1.7.30.pom (14 kB at 384 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.pom (18 kB at 475 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/22/commons-parent-22.pom (42 kB at 1.2 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/apache/9/apache-9.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/apache/9/apache-9.pom (15 kB at 345 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-beanutils/commons-beanutils/1.8.3/commons-beanutils-1.8.3.pom (11 kB at 295 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/14/commons-parent-14.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/14/commons-parent-14.pom (31 kB at 805 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.pom (18 kB at 437 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/5/commons-parent-5.pom (16 kB at 446 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-lang3/3.10/commons-lang3-3.10.pom (31 kB at 745 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/50/commons-parent-50.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-parent/50/commons-parent-50.pom (76 kB at 1.9 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.pom (7.5 kB at 156 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.pom (2.9 kB at 84 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.pom (5.4 kB at 150 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.pom (32 kB at 746 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.pom (7.0 kB at 184 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.pom (750 B at 20 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.0.0/plexus-containers-2.0.0.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/2.0.0/plexus-containers-2.0.0.pom (4.8 kB at 126 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.4/plexus-component-annotations-1.5.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/1.5.4/plexus-component-annotations-1.5.4.pom (815 B at 21 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.4/plexus-containers-1.5.4.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-containers/1.5.4/plexus-containers-1.5.4.pom (4.2 kB at 125 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.5/plexus-2.0.5.pom
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus/2.0.5/plexus-2.0.5.pom (17 kB at 457 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.jar
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-sink-api/2.0.0/doxia-sink-api-2.0.0.jar (11 kB at 306 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-integration-tools/2.0.0/doxia-integration-tools-2.0.0.jar (50 kB at 642 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-model/2.0.0/doxia-site-model-2.0.0.jar (86 kB at 754 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/reporting/maven-reporting-impl/4.0.0/maven-reporting-impl-4.0.0.jar (21 kB at 181 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-site-renderer/2.0.0/doxia-site-renderer-2.0.0.jar (44 kB at 333 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-text/1.12.0/commons-text-1.12.0.jar (251 kB at 1.9 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-core/2.0.0/doxia-core-2.0.0.jar (168 kB at 1.2 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-skin-model/2.0.0/doxia-skin-model-2.0.0.jar (16 kB at 109 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xhtml5/2.0.0/doxia-module-xhtml5-2.0.0.jar (17 kB at 112 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-velocity/2.2.0/plexus-velocity-2.2.0.jar (5.7 kB at 34 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-apt/2.0.0/doxia-module-apt-2.0.0.jar (54 kB at 246 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/velocity-engine-core/2.4/velocity-engine-core-2.4.jar (510 kB at 2.0 MB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/doxia/doxia-module-xdoc/2.0.0/doxia-module-xdoc-2.0.0.jar (35 kB at 140 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.10.0/plexus-archiver-4.10.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/com/github/cliftonlabs/json-simple/3.0.2/json-simple-3.0.2.jar (35 kB at 127 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-digester3/3.2/commons-digester3-3.2.jar (242 kB at 872 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-classworlds/2.6.0/plexus-classworlds-2.6.0.jar (53 kB at 180 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-10/plexus-i18n-1.0-beta-10.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-archiver/4.10.0/plexus-archiver-4.10.0.jar (225 kB at 726 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-i18n/1.0-beta-10/plexus-i18n-1.0-beta-10.jar (12 kB at 34 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-tree/3.3.0/maven-dependency-tree-3.3.0.jar (43 kB at 104 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/commons-codec/commons-codec/1.17.0/commons-codec-1.17.0.jar (373 kB at 900 kB/s)
+[INFO] Downloading from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/velocity/tools/velocity-tools-generic/3.1/velocity-tools-generic-3.1.jar (217 kB at 466 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/codehaus/plexus/plexus-component-annotations/2.0.0/plexus-component-annotations-2.0.0.jar (4.2 kB at 9.0 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/commons/commons-compress/1.26.2/commons-compress-1.26.2.jar (1.1 MB at 2.3 MB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-dependency-analyzer/1.15.0/maven-dependency-analyzer-1.15.0.jar (45 kB at 88 kB/s)
+[INFO] Downloaded from central: https://repo.maven.apache.org/maven2/org/apache/maven/shared/maven-artifact-transfer/0.13.1/maven-artifact-transfer-0.13.1.jar (159 kB at 237 kB/s)
+[INFO] com.mehuljain:jobpulse:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.24:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.24:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.24.3:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:6.3.3:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.2.15:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.6.40.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.6.1.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.2.0:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.3:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.17.8:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.6:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.5.8:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.5.8:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-context:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:6.2.15:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.2.15:compile
+[INFO] |     \- org.aspectj:aspectjweaver:jar:1.9.25.1:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-mail:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:6.2.15:compile
+[INFO] |  \- org.eclipse.angus:jakarta.mail:jar:2.0.5:compile
+[INFO] |     +- jakarta.activation:jakarta.activation-api:jar:2.1.4:compile
+[INFO] |     \- org.eclipse.angus:angus-activation:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.50:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.jsoup:jsoup:jar:1.17.2:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.50:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.50:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.2.15:compile
+[INFO] |  |  \- io.micrometer:micrometer-observation:jar:1.15.8:compile
+[INFO] |  |     \- io.micrometer:micrometer-commons:jar:1.15.8:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.2.15:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.2.15:compile
+[INFO] +- org.springframework.boot:spring-boot-devtools:jar:3.5.10-SNAPSHOT:runtime (optional)
+[INFO] |  +- org.springframework.boot:spring-boot:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:3.5.10-SNAPSHOT:compile
+[INFO] +- org.postgresql:postgresql:jar:42.7.8:runtime
+[INFO] |  \- org.checkerframework:checker-qual:jar:3.49.5:runtime
+[INFO] \- org.springframework.boot:spring-boot-starter-test:jar:3.5.10-SNAPSHOT:test
+[INFO]    +- org.springframework.boot:spring-boot-test:jar:3.5.10-SNAPSHOT:test
+[INFO]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.10-SNAPSHOT:test
+[INFO]    +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO]    +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime
+[INFO]    +- net.minidev:json-smart:jar:2.5.2:test
+[INFO]    |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO]    |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO]    +- org.assertj:assertj-core:jar:3.27.6:test
+[INFO]    +- org.awaitility:awaitility:jar:4.2.2:test
+[INFO]    +- org.hamcrest:hamcrest:jar:3.0:test
+[INFO]    +- org.junit.jupiter:junit-jupiter:jar:5.12.2:test
+[INFO]    |  +- org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test
+[INFO]    |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO]    |  |  +- org.junit.platform:junit-platform-commons:jar:1.12.2:test
+[INFO]    |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO]    |  +- org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test
+[INFO]    |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test
+[INFO]    |     \- org.junit.platform:junit-platform-engine:jar:1.12.2:test
+[INFO]    +- org.mockito:mockito-core:jar:5.17.0:test
+[INFO]    |  +- net.bytebuddy:byte-buddy-agent:jar:1.17.8:test
+[INFO]    |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO]    +- org.mockito:mockito-junit-jupiter:jar:5.17.0:test
+[INFO]    +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO]    |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO]    +- org.springframework:spring-core:jar:6.2.15:compile
+[INFO]    |  \- org.springframework:spring-jcl:jar:6.2.15:compile
+[INFO]    +- org.springframework:spring-test:jar:6.2.15:test
+[INFO]    \- org.xmlunit:xmlunit-core:jar:2.10.4:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.364 s
+[INFO] Finished at: 2026-01-17T22:38:29+05:30
+[INFO] ------------------------------------------------------------------------
+2026-01-17T17:08:29.114Z [INFO] [MavenBuildTool] Successfully got dependency tree of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:29.115Z [INFO] [MavenBuildTool] Getting Java version of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse from pom.xml
+2026-01-17T17:08:29.115Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:29.115Z [INFO] [MavenBuildTool] Getting all module coordinates of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:29.115Z [INFO] [MavenBuildTool] Getting effective POMs of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:29.115Z [INFO] [Environment] Running command (Java 17): mvnw help:effective-pom -Doutput=effective-pom-9a038c1b-ca1d-4d4f-9d60-c9d817bcbe03.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.mehuljain:jobpulse >-----------------------
+[INFO] Building jobpulse 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ jobpulse ---
+[INFO] Effective-POM written to: /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/effective-pom-9a038c1b-ca1d-4d4f-9d60-c9d817bcbe03.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.255 s
+[INFO] Finished at: 2026-01-17T22:38:30+05:30
+[INFO] ------------------------------------------------------------------------
+2026-01-17T17:08:30.082Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/pom.xml
+2026-01-17T17:08:30.083Z [INFO] [MavenBuildTool] Java version found in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/pom.xml: 17
+2026-01-17T17:08:30.083Z [INFO] Source Java version: 17
+2026-01-17T17:08:30.083Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2026-01-17T17:08:30.083Z [INFO] No target dependencies found for Spring Boot. Skipping target dependency validation
+2026-01-17T17:08:30.083Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2026-01-17T17:08:30.083Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-01-17T17:08:30.083Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Framework
+2026-01-17T17:08:30.083Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-01-17T17:08:30.083Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Security
+2026-01-17T17:08:30.084Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-01-17T17:08:30.084Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Jakarta EE
+2026-01-17T17:08:30.084Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-01-17T17:08:30.084Z [INFO] validateAndUpdateTargets, targets: [object Object], group:JUnit
+2026-01-17T17:08:30.084Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Java
+2026-01-17T17:08:30.084Z [INFO] validateAndUpdateTargets, userTargets: [object Object]
+2026-01-17T17:08:30.084Z [INFO] initUpgradeGoal, targetDeps: [object Object]
+2026-01-17T17:08:30.084Z [INFO] Upgrade goal initialized: [
+  {
+    "name": "Java",
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "21",
+    "recipes": [
+      {
+        "id": "com.microsoft.java.UpgradeToJava21",
+        "name": "Upgrade from Java 8 to Java 21",
+        "description": "Migrate Java 8 to Java 21.",
+        "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+        "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+      }
+    ],
+    "supportedSources": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": ">=8 <21"
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "11",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava11",
+            "name": "Upgrade from Java 8 to Java 11",
+            "description": "Migrate Java 8 to Java 11.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <11"
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11"
+          }
+        ]
+      },
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "17",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava17",
+            "name": "Upgrade from Java 8 to Java 17",
+            "description": "Migrate Java 8 to Java 17.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <17"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17"
+          }
+        ]
+      }
+    ],
+    "effects": [
+      {
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21"
+      }
+    ]
+  }
+]
+2026-01-17T17:08:30.084Z [INFO] Initializing upgrade options...
+2026-01-17T17:08:30.084Z [INFO] Source Java version: 17
+2026-01-17T17:08:30.084Z [INFO] Source JDK: {"name":"java","path":"/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin","version":"17"}
+2026-01-17T17:08:30.084Z [INFO] Target Java version: 21
+2026-01-17T17:08:30.094Z [INFO] Target JDK: {"name":"java","path":"/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/bin","version":"21.0.8","source":"JAVA_HOME"}
+2026-01-17T17:08:30.094Z [INFO] Maven project detected.
+2026-01-17T17:08:30.094Z [INFO] Build tool type: mvnw
+2026-01-17T17:08:30.094Z [INFO] Build tool: {"name":"mvnw","path":".","version":""}
+2026-01-17T17:08:30.094Z [INFO] Working branch: appmod/java-upgrade-20260117170824
+2026-01-17T17:08:30.094Z [INFO] Upgrade options initialized: {
+  "target": {
+    "jdk": {
+      "name": "java",
+      "path": "/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/bin",
+      "version": "21.0.8",
+      "source": "JAVA_HOME"
+    },
+    "dependencies": [
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava21",
+            "name": "Upgrade from Java 8 to Java 21",
+            "description": "Migrate Java 8 to Java 21.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <21"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava17",
+                "name": "Upgrade from Java 8 to Java 17",
+                "description": "Migrate Java 8 to Java 17.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <17"
+              },
+              {
+                "name": "Java",
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11",
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToJava11",
+                    "name": "Upgrade from Java 8 to Java 11",
+                    "description": "Migrate Java 8 to Java 11.",
+                    "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                    "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <11"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "11"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "21"
+          }
+        ]
+      }
+    ],
+    "buildTool": {
+      "name": "mvnw",
+      "path": ".",
+      "version": ""
+    }
+  },
+  "workingBranch": "appmod/java-upgrade-20260117170824",
+  "runTests": true
+}
+2026-01-17T17:08:30.094Z [INFO] Project dependencies loaded: [
+  "org.springframework.boot:spring-boot-starter-data-jpa:3.5.10-SNAPSHOT:jar",
+  "org.springframework.boot:spring-boot-starter-mail:3.5.10-SNAPSHOT:jar",
+  "org.springframework.boot:spring-boot-starter-validation:3.5.10-SNAPSHOT:jar",
+  "org.jsoup:jsoup:1.17.2:jar",
+  "org.springframework.boot:spring-boot-starter-web:3.5.10-SNAPSHOT:jar",
+  "org.springframework.boot:spring-boot-devtools:3.5.10-SNAPSHOT:jar",
+  "org.postgresql:postgresql:42.7.8:jar",
+  "org.springframework.boot:spring-boot-starter-test:3.5.10-SNAPSHOT:jar"
+]
+2026-01-17T17:08:30.094Z [INFO] Project modules loaded: [
+  "com.mehuljain:jobpulse:0.0.1-SNAPSHOT"
+]
+2026-01-17T17:08:30.094Z [INFO] done initializing context.
+2026-01-17T17:08:30.094Z [INFO] Source dependencies: [
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-data-jpa",
+    "type": "jar",
+    "version": "3.5.10-SNAPSHOT",
+    "scope": "compile",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-mail",
+    "type": "jar",
+    "version": "3.5.10-SNAPSHOT",
+    "scope": "compile",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-validation",
+    "type": "jar",
+    "version": "3.5.10-SNAPSHOT",
+    "scope": "compile",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.jsoup",
+    "artifactId": "jsoup",
+    "type": "jar",
+    "version": "1.17.2",
+    "scope": "compile",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-web",
+    "type": "jar",
+    "version": "3.5.10-SNAPSHOT",
+    "scope": "compile",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-devtools",
+    "type": "jar",
+    "version": "3.5.10-SNAPSHOT",
+    "scope": "runtime",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.postgresql",
+    "artifactId": "postgresql",
+    "type": "jar",
+    "version": "42.7.8",
+    "scope": "runtime",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "org.springframework.boot",
+    "artifactId": "spring-boot-starter-test",
+    "type": "jar",
+    "version": "3.5.10-SNAPSHOT",
+    "scope": "test",
+    "module": "jobpulse"
+  },
+  {
+    "groupId": "java",
+    "artifactId": "*",
+    "version": "17"
+  }
+]
+2026-01-17T17:08:30.094Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2026-01-17T17:08:30.095Z [INFO] No target dependencies found for Spring Boot. Skipping target dependency validation
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2026-01-17T17:08:30.095Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Framework
+2026-01-17T17:08:30.095Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Security
+2026-01-17T17:08:30.095Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Jakarta EE
+2026-01-17T17:08:30.095Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, targets: [object Object], group:JUnit
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Java
+2026-01-17T17:08:30.095Z [INFO] validateAndUpdateTargets, userTargets: [object Object]
+2026-01-17T17:08:30.095Z [INFO] Upgrade route: upgrade `Java` to *21* with oneStepOneFramework=false
+2026-01-17T17:08:30.095Z [INFO] Upgrade route planned: [
+  [
+    {
+      "name": "Java",
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "21",
+      "recipes": [
+        {
+          "id": "com.microsoft.java.UpgradeToJava21",
+          "name": "Upgrade from Java 8 to Java 21",
+          "description": "Migrate Java 8 to Java 21.",
+          "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+          "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+        }
+      ],
+      "supportedSources": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": ">=8 <21"
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "11",
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToJava11",
+              "name": "Upgrade from Java 8 to Java 11",
+              "description": "Migrate Java 8 to Java 11.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <11"
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11"
+            }
+          ]
+        },
+        {
+          "name": "Java",
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "17",
+          "recipes": [
+            {
+              "id": "com.microsoft.java.UpgradeToJava17",
+              "name": "Upgrade from Java 8 to Java 17",
+              "description": "Migrate Java 8 to Java 17.",
+              "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+              "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+            }
+          ],
+          "supportedSources": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": ">=8 <17"
+            },
+            {
+              "name": "Java",
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "11",
+              "recipes": [
+                {
+                  "id": "com.microsoft.java.UpgradeToJava11",
+                  "name": "Upgrade from Java 8 to Java 11",
+                  "description": "Migrate Java 8 to Java 11.",
+                  "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                  "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+                }
+              ],
+              "supportedSources": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": ">=8 <11"
+                }
+              ],
+              "effects": [
+                {
+                  "groupId": "java",
+                  "artifactId": "*",
+                  "version": "11"
+                }
+              ]
+            }
+          ],
+          "effects": [
+            {
+              "groupId": "java",
+              "artifactId": "*",
+              "version": "17"
+            }
+          ]
+        }
+      ],
+      "effects": [
+        {
+          "groupId": "java",
+          "artifactId": "*",
+          "version": "21"
+        }
+      ]
+    }
+  ]
+]
+2026-01-17T17:08:30.107Z [INFO] ?? src/main/java/com/mehuljain/jobpulse/entity/
+
+2026-01-17T17:08:30.111Z [INFO] Upgrade plan written to /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/.github/java-upgrade/20260117170824/plan.md

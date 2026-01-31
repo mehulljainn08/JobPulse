@@ -1,0 +1,43 @@
+2026-01-17T17:08:58.369Z [INFO] [MavenBuildTool] Running test cases of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse using Maven
+2026-01-17T17:08:58.370Z [INFO] [Environment] Running command (Java 17): mvnw clean test -q -B -fn
+22:39:00.055 [main] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils -- Could not detect default configuration classes for test class [com.mehuljain.jobpulse.JobpulseApplicationTests]: JobpulseApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:39:00.090 [main] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper -- Found @SpringBootConfiguration com.mehuljain.jobpulse.JobpulseApplication for test class com.mehuljain.jobpulse.JobpulseApplicationTests
+22:39:00.137 [main] INFO org.springframework.boot.devtools.restart.RestartApplicationListener -- Restart disabled due to context in which it is running
+
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::      (v3.5.10-SNAPSHOT)
+
+2026-01-17T22:39:00.229+05:30  INFO 17224 --- [jobpulse] [           main] c.m.jobpulse.JobpulseApplicationTests    : Starting JobpulseApplicationTests using Java 17.0.16 with PID 17224 (started by mehuljain in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse)
+2026-01-17T22:39:00.230+05:30  INFO 17224 --- [jobpulse] [           main] c.m.jobpulse.JobpulseApplicationTests    : No active profile set, falling back to 1 default profile: "default"
+2026-01-17T22:39:00.434+05:30  INFO 17224 --- [jobpulse] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-17T22:39:00.440+05:30  INFO 17224 --- [jobpulse] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 3 ms. Found 0 JPA repository interfaces.
+2026-01-17T22:39:00.558+05:30  INFO 17224 --- [jobpulse] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2026-01-17T22:39:00.572+05:30  INFO 17224 --- [jobpulse] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.40.Final
+2026-01-17T22:39:00.581+05:30  INFO 17224 --- [jobpulse] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2026-01-17T22:39:00.685+05:30  INFO 17224 --- [jobpulse] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-17T22:39:00.696+05:30  INFO 17224 --- [jobpulse] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-17T22:39:00.788+05:30  INFO 17224 --- [jobpulse] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f8667bb
+2026-01-17T22:39:00.788+05:30  INFO 17224 --- [jobpulse] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-17T22:39:00.823+05:30  INFO 17224 --- [jobpulse] [           main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 16.11
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-01-17T22:39:00.930+05:30  INFO 17224 --- [jobpulse] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-17T22:39:00.932+05:30  INFO 17224 --- [jobpulse] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-17T22:39:00.989+05:30  WARN 17224 --- [jobpulse] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-01-17T22:39:01.191+05:30  INFO 17224 --- [jobpulse] [           main] c.m.jobpulse.JobpulseApplicationTests    : Started JobpulseApplicationTests in 1.057 seconds (process running for 1.37)
+OpenJDK 64-Bit Server VM warning: Sharing is only supported for boot loader classes because bootstrap classpath has been appended
+2026-01-17T17:09:01.548Z [INFO] [MavenBuildTool] loading surefire reports.
+2026-01-17T17:09:01.555Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2026-01-17T17:09:01.555Z [INFO] [MavenBuildTool] Cleaning /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse using Maven
+2026-01-17T17:09:01.555Z [INFO] [Environment] Running command (Java 17): mvnw clean -q -B -fn

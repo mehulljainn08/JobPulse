@@ -1,0 +1,31 @@
+2026-01-17T17:08:55.177Z [INFO] getting CVEs for dependencies:
+ - org.springframework.boot:spring-boot-starter-data-jpa:3.5.10-SNAPSHOT
+  - org.springframework.boot:spring-boot-starter-mail:3.5.10-SNAPSHOT
+  - org.springframework.boot:spring-boot-starter-validation:3.5.10-SNAPSHOT
+  - org.jsoup:jsoup:1.17.2
+  - org.projectlombok:lombok:1.18.30
+  - org.springframework.boot:spring-boot-starter-web:3.5.10-SNAPSHOT
+  - org.springframework.boot:spring-boot-devtools:3.5.10-SNAPSHOT
+  - org.postgresql:postgresql:42.7.8
+  - org.springframework.boot:spring-boot-starter-test:3.5.10-SNAPSHOT
+  - java:*:17...
+2026-01-17T17:08:55.177Z [INFO] getting gitHub access token...
+2026-01-17T17:08:57.905Z [ERROR] Failed to get GitHub access token to validate CVEs for the given dependencies.
+2026-01-17T17:08:57.906Z [INFO] Processing batch 1/1, size: 10
+2026-01-17T17:08:57.907Z [INFO] listing CVEs from GitHub for dependencies [
+  "org.springframework.boot:spring-boot-starter-data-jpa:3.5.10-SNAPSHOT",
+  "org.springframework.boot:spring-boot-starter-mail:3.5.10-SNAPSHOT",
+  "org.springframework.boot:spring-boot-starter-validation:3.5.10-SNAPSHOT",
+  "org.jsoup:jsoup:1.17.2",
+  "org.projectlombok:lombok:1.18.30",
+  "org.springframework.boot:spring-boot-starter-web:3.5.10-SNAPSHOT",
+  "org.springframework.boot:spring-boot-devtools:3.5.10-SNAPSHOT",
+  "org.postgresql:postgresql:42.7.8",
+  "org.springframework.boot:spring-boot-starter-test:3.5.10-SNAPSHOT",
+  "java:*:17"
+]
+2026-01-17T17:08:58.367Z [INFO] Fetched 0 total advisories across all pages
+2026-01-17T17:08:58.368Z [INFO] grouping CVEs and finding max patched version by dep...
+2026-01-17T17:08:58.368Z [INFO] done getting 0 CVEs for 10 dependencies
+2026-01-17T17:08:58.368Z [INFO] calculating patched version by dep...
+2026-01-17T17:08:58.368Z [INFO] finished getting CVEs for dependencies.

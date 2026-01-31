@@ -1,0 +1,7 @@
+2026-01-17T17:08:52.703Z [INFO] [MavenBuildTool] Getting build errors of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse using Maven
+2026-01-17T17:08:52.703Z [INFO] [Environment] Running command (Java 17): mvnw clean test-compile -q -B -fn
+2026-01-17T17:08:54.378Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-01-17T17:08:54.378Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-01-17T17:08:54.380Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-01-17T17:08:54.380Z [INFO] [MavenBuildTool] Cleaning /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse using Maven
+2026-01-17T17:08:54.380Z [INFO] [Environment] Running command (Java 17): mvnw clean -q -B -fn

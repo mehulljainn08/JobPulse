@@ -1,0 +1,137 @@
+2026-01-17T17:08:52.702Z [INFO] Prechecking project JobPulse...
+2026-01-17T17:08:52.702Z [INFO] Prechecking build status...
+2026-01-17T17:08:55.177Z [INFO] Prechecking CVEs...
+2026-01-17T17:08:58.369Z [INFO] Prechecking tests...
+2026-01-17T17:08:58.369Z [INFO] Run tests before upgrading...
+2026-01-17T17:09:02.592Z [INFO] Prepare initial state...
+2026-01-17T17:09:02.592Z [INFO] [Project JobPulse]: getting project state.
+2026-01-17T17:09:02.592Z [INFO] [Project JobPulse]: getting Java version.
+2026-01-17T17:09:02.592Z [INFO] [Project JobPulse]: got Java version: 17
+2026-01-17T17:09:02.592Z [INFO] [Project JobPulse]: getting dependencies promise.
+2026-01-17T17:09:02.592Z [INFO] Project initial state: {
+  "javaVersion": "17",
+  "dependencies": [
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-data-jpa",
+      "type": "jar",
+      "version": "3.5.10-SNAPSHOT",
+      "scope": "compile",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-mail",
+      "type": "jar",
+      "version": "3.5.10-SNAPSHOT",
+      "scope": "compile",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-validation",
+      "type": "jar",
+      "version": "3.5.10-SNAPSHOT",
+      "scope": "compile",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.jsoup",
+      "artifactId": "jsoup",
+      "type": "jar",
+      "version": "1.17.2",
+      "scope": "compile",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.projectlombok",
+      "artifactId": "lombok",
+      "type": "jar",
+      "version": "1.18.30",
+      "scope": "provided",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-web",
+      "type": "jar",
+      "version": "3.5.10-SNAPSHOT",
+      "scope": "compile",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-devtools",
+      "type": "jar",
+      "version": "3.5.10-SNAPSHOT",
+      "scope": "runtime",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.postgresql",
+      "artifactId": "postgresql",
+      "type": "jar",
+      "version": "42.7.8",
+      "scope": "runtime",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "org.springframework.boot",
+      "artifactId": "spring-boot-starter-test",
+      "type": "jar",
+      "version": "3.5.10-SNAPSHOT",
+      "scope": "test",
+      "module": "jobpulse"
+    },
+    {
+      "groupId": "java",
+      "artifactId": "*",
+      "version": "17"
+    }
+  ],
+  "buildResult": {
+    "numOfJavaFiles": 2,
+    "numOfClassFiles": 2,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 2,
+        "numOfClassFiles": 2
+      }
+    },
+    "errors": [],
+    "command": "mvnw clean test-compile -q -B -fn"
+  },
+  "testResult": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": [
+      {
+        "name": "com.mehuljain.jobpulse.JobpulseApplicationTests",
+        "time": 1.469,
+        "tests": 1,
+        "errors": 0,
+        "skipped": 0,
+        "failures": 0,
+        "testcases": [
+          {
+            "name": "contextLoads",
+            "classname": "com.mehuljain.jobpulse.JobpulseApplicationTests",
+            "time": 0.28,
+            "failures": [],
+            "rerunFailures": [],
+            "flakyFailures": [],
+            "errors": [],
+            "rerunErrors": [],
+            "flakyErrors": []
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,399 @@
+2026-01-17T17:08:42.438Z [INFO] validate plan and setup env from plan.md file...
+2026-01-17T17:08:42.439Z [INFO] getLLMClient: validating user selected model "auto"
+2026-01-17T17:08:44.976Z [INFO] Model auto is not valid: Error: Endpoint not found for model auto
+2026-01-17T17:08:44.976Z [WARN] getLLMClient: provided model "auto" is not valid.
+2026-01-17T17:08:44.976Z [WARN] getLLMClient: no user selected model provided, try using default model: claude-sonnet-4
+2026-01-17T17:08:44.993Z [INFO] Available models: gpt-5-mini, gpt-4o-mini, copilot-fast, gpt-4o, claude-haiku-4.5, gpt-4.1, oswe-vscode-prime, auto
+2026-01-17T17:08:44.993Z [INFO] Finding chat model from candidates: claude-sonnet-4, claude-3.5-sonnet, claude-3.7-sonnet, gpt-4.1, gpt-4o, gpt-4o-mini
+2026-01-17T17:08:46.288Z [INFO] Model gpt-4.1 is selected.
+2026-01-17T17:08:46.289Z [INFO] parsing plan.md...
+2026-01-17T17:08:49.478Z [INFO] Successfully parsed plan.md to JSON:
+2026-01-17T17:08:49.479Z [INFO] {
+  "projectConfig": {
+    "name": "JobPulse",
+    "dir": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse",
+    "jdk": {
+      "name": "java",
+      "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin",
+      "version": "17"
+    },
+    "buildTool": {
+      "name": "mvnw",
+      "path": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse",
+      "version": "",
+      "defaultOptions": ""
+    }
+  },
+  "upgradeOptions": {
+    "target": {
+      "javaVersion": "21",
+      "dependencies": [],
+      "jdk": {
+        "name": "java",
+        "path": "/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/bin",
+        "version": "21"
+      }
+    },
+    "guidelines": "",
+    "workingBranch": "appmod/java-upgrade-20260117170824",
+    "runTests": true
+  }
+}
+2026-01-17T17:08:49.479Z [INFO] Project /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse is a maven project, try to get java version from pom.xml
+2026-01-17T17:08:49.479Z [INFO] Project java version: 17
+2026-01-17T17:08:49.479Z [INFO] Build tool type: mvnw
+2026-01-17T17:08:49.479Z [INFO] [Environment] Running command (Java 17): java -version
+openjdk version "17.0.16" 2025-07-15
+OpenJDK Runtime Environment Temurin-17.0.16+8 (build 17.0.16+8)
+OpenJDK 64-Bit Server VM Temurin-17.0.16+8 (build 17.0.16+8, mixed mode, sharing)
+2026-01-17T17:08:49.511Z [INFO] [JdkEnvironment] Got real Java version: 17.0.16
+2026-01-17T17:08:49.512Z [INFO] JDK: {
+  "name": "java",
+  "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin",
+  "version": "17"
+}
+2026-01-17T17:08:49.512Z [INFO] [Environment] Running command (Java 17): mvnw --version
+Apache Maven 3.9.12 (848fbb4bf2d427b72bdb2471c22fced7ebd9a7a1)
+Maven home: /Users/mehuljain/.m2/wrapper/dists/apache-maven-3.9.12/6068d197
+Java version: 17.0.16, vendor: Eclipse Adoptium, runtime: /Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home
+Default locale: en_IN, platform encoding: UTF-8
+OS name: "mac os x", version: "26.2", arch: "aarch64", family: "mac"
+2026-01-17T17:08:49.864Z [INFO] Real build tool version: 3.9.12
+2026-01-17T17:08:49.864Z [INFO] Build tool: {
+  "name": "mvnw",
+  "path": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse",
+  "version": "3.9.12"
+}
+2026-01-17T17:08:49.864Z [INFO] Project config: {
+  "name": "JobPulse",
+  "dir": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse",
+  "jdk": {
+    "name": "java",
+    "path": "/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin",
+    "version": "17"
+  },
+  "buildTool": {
+    "name": "mvnw",
+    "path": "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse",
+    "version": "3.9.12",
+    "defaultOptions": ""
+  }
+}
+2026-01-17T17:08:49.865Z [INFO] [Project JobPulse]: getting Java version.
+2026-01-17T17:08:49.865Z [INFO] [Project JobPulse]: reset Java version promise.
+2026-01-17T17:08:49.865Z [INFO] [MavenBuildTool] Getting Java version of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse from pom.xml
+2026-01-17T17:08:49.865Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:49.865Z [INFO] [MavenBuildTool] Getting all module coordinates of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:49.865Z [INFO] [MavenBuildTool] Getting effective POMs of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:49.866Z [INFO] [Environment] Running command (Java 17): mvnw help:effective-pom -Doutput=effective-pom-fddc4b3e-1b0f-45fe-833f-a8a87c63edc4.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.mehuljain:jobpulse >-----------------------
+[INFO] Building jobpulse 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.5.1:effective-pom (default-cli) @ jobpulse ---
+[INFO] Effective-POM written to: /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/effective-pom-fddc4b3e-1b0f-45fe-833f-a8a87c63edc4.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.373 s
+[INFO] Finished at: 2026-01-17T22:38:51+05:30
+[INFO] ------------------------------------------------------------------------
+2026-01-17T17:08:51.347Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/pom.xml
+2026-01-17T17:08:51.349Z [INFO] [MavenBuildTool] Java version found in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/pom.xml: 17
+2026-01-17T17:08:51.349Z [INFO] [Project JobPulse]: got Java version: 17
+2026-01-17T17:08:51.349Z [INFO] Source Java version: 17
+2026-01-17T17:08:51.349Z [INFO] [Project JobPulse]: getting dependencies promise.
+2026-01-17T17:08:51.349Z [INFO] [Project JobPulse]: reset dependencies promise.
+2026-01-17T17:08:51.349Z [INFO] [Environment] Running command (Java 17): mvnw dependency:tree -B
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] -----------------------< com.mehuljain:jobpulse >-----------------------
+[INFO] Building jobpulse 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- dependency:3.8.1:tree (default-cli) @ jobpulse ---
+[INFO] com.mehuljain:jobpulse:jar:0.0.1-SNAPSHOT
+[INFO] +- org.springframework.boot:spring-boot-starter-data-jpa:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- org.springframework.boot:spring-boot-starter-logging:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  |  +- ch.qos.logback:logback-classic:jar:1.5.24:compile
+[INFO] |  |  |  |  \- ch.qos.logback:logback-core:jar:1.5.24:compile
+[INFO] |  |  |  +- org.apache.logging.log4j:log4j-to-slf4j:jar:2.24.3:compile
+[INFO] |  |  |  |  \- org.apache.logging.log4j:log4j-api:jar:2.24.3:compile
+[INFO] |  |  |  \- org.slf4j:jul-to-slf4j:jar:2.0.17:compile
+[INFO] |  |  +- jakarta.annotation:jakarta.annotation-api:jar:2.1.1:compile
+[INFO] |  |  \- org.yaml:snakeyaml:jar:2.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-jdbc:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- com.zaxxer:HikariCP:jar:6.3.3:compile
+[INFO] |  |  \- org.springframework:spring-jdbc:jar:6.2.15:compile
+[INFO] |  +- org.hibernate.orm:hibernate-core:jar:6.6.40.Final:compile
+[INFO] |  |  +- jakarta.persistence:jakarta.persistence-api:jar:3.1.0:compile
+[INFO] |  |  +- jakarta.transaction:jakarta.transaction-api:jar:2.0.1:compile
+[INFO] |  |  +- org.jboss.logging:jboss-logging:jar:3.6.1.Final:compile
+[INFO] |  |  +- org.hibernate.common:hibernate-commons-annotations:jar:7.0.3.Final:runtime
+[INFO] |  |  +- io.smallrye:jandex:jar:3.2.0:runtime
+[INFO] |  |  +- com.fasterxml:classmate:jar:1.7.3:compile
+[INFO] |  |  +- net.bytebuddy:byte-buddy:jar:1.17.8:runtime
+[INFO] |  |  +- org.glassfish.jaxb:jaxb-runtime:jar:4.0.6:runtime
+[INFO] |  |  |  \- org.glassfish.jaxb:jaxb-core:jar:4.0.6:runtime
+[INFO] |  |  |     +- org.glassfish.jaxb:txw2:jar:4.0.6:runtime
+[INFO] |  |  |     \- com.sun.istack:istack-commons-runtime:jar:4.1.2:runtime
+[INFO] |  |  +- jakarta.inject:jakarta.inject-api:jar:2.0.1:runtime
+[INFO] |  |  \- org.antlr:antlr4-runtime:jar:4.13.0:compile
+[INFO] |  +- org.springframework.data:spring-data-jpa:jar:3.5.8:compile
+[INFO] |  |  +- org.springframework.data:spring-data-commons:jar:3.5.8:compile
+[INFO] |  |  +- org.springframework:spring-orm:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-context:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-aop:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-tx:jar:6.2.15:compile
+[INFO] |  |  +- org.springframework:spring-beans:jar:6.2.15:compile
+[INFO] |  |  \- org.slf4j:slf4j-api:jar:2.0.17:compile
+[INFO] |  \- org.springframework:spring-aspects:jar:6.2.15:compile
+[INFO] |     \- org.aspectj:aspectjweaver:jar:1.9.25.1:compile
+[INFO] +- org.springframework.boot:spring-boot-starter-mail:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.springframework:spring-context-support:jar:6.2.15:compile
+[INFO] |  \- org.eclipse.angus:jakarta.mail:jar:2.0.5:compile
+[INFO] |     +- jakarta.activation:jakarta.activation-api:jar:2.1.4:compile
+[INFO] |     \- org.eclipse.angus:angus-activation:jar:2.0.3:runtime
+[INFO] +- org.springframework.boot:spring-boot-starter-validation:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.apache.tomcat.embed:tomcat-embed-el:jar:10.1.50:compile
+[INFO] |  \- org.hibernate.validator:hibernate-validator:jar:8.0.3.Final:compile
+[INFO] |     \- jakarta.validation:jakarta.validation-api:jar:3.0.2:compile
+[INFO] +- org.jsoup:jsoup:jar:1.17.2:compile
+[INFO] +- org.projectlombok:lombok:jar:1.18.30:provided
+[INFO] +- org.springframework.boot:spring-boot-starter-web:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-json:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- com.fasterxml.jackson.core:jackson-databind:jar:2.19.4:compile
+[INFO] |  |  |  +- com.fasterxml.jackson.core:jackson-annotations:jar:2.19.4:compile
+[INFO] |  |  |  \- com.fasterxml.jackson.core:jackson-core:jar:2.19.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jdk8:jar:2.19.4:compile
+[INFO] |  |  +- com.fasterxml.jackson.datatype:jackson-datatype-jsr310:jar:2.19.4:compile
+[INFO] |  |  \- com.fasterxml.jackson.module:jackson-module-parameter-names:jar:2.19.4:compile
+[INFO] |  +- org.springframework.boot:spring-boot-starter-tomcat:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  |  +- org.apache.tomcat.embed:tomcat-embed-core:jar:10.1.50:compile
+[INFO] |  |  \- org.apache.tomcat.embed:tomcat-embed-websocket:jar:10.1.50:compile
+[INFO] |  +- org.springframework:spring-web:jar:6.2.15:compile
+[INFO] |  |  \- io.micrometer:micrometer-observation:jar:1.15.8:compile
+[INFO] |  |     \- io.micrometer:micrometer-commons:jar:1.15.8:compile
+[INFO] |  \- org.springframework:spring-webmvc:jar:6.2.15:compile
+[INFO] |     \- org.springframework:spring-expression:jar:6.2.15:compile
+[INFO] +- org.springframework.boot:spring-boot-devtools:jar:3.5.10-SNAPSHOT:runtime (optional)
+[INFO] |  +- org.springframework.boot:spring-boot:jar:3.5.10-SNAPSHOT:compile
+[INFO] |  \- org.springframework.boot:spring-boot-autoconfigure:jar:3.5.10-SNAPSHOT:compile
+[INFO] +- org.postgresql:postgresql:jar:42.7.8:runtime
+[INFO] |  \- org.checkerframework:checker-qual:jar:3.49.5:runtime
+[INFO] \- org.springframework.boot:spring-boot-starter-test:jar:3.5.10-SNAPSHOT:test
+[INFO]    +- org.springframework.boot:spring-boot-test:jar:3.5.10-SNAPSHOT:test
+[INFO]    +- org.springframework.boot:spring-boot-test-autoconfigure:jar:3.5.10-SNAPSHOT:test
+[INFO]    +- com.jayway.jsonpath:json-path:jar:2.9.0:test
+[INFO]    +- jakarta.xml.bind:jakarta.xml.bind-api:jar:4.0.4:runtime
+[INFO]    +- net.minidev:json-smart:jar:2.5.2:test
+[INFO]    |  \- net.minidev:accessors-smart:jar:2.5.2:test
+[INFO]    |     \- org.ow2.asm:asm:jar:9.7.1:test
+[INFO]    +- org.assertj:assertj-core:jar:3.27.6:test
+[INFO]    +- org.awaitility:awaitility:jar:4.2.2:test
+[INFO]    +- org.hamcrest:hamcrest:jar:3.0:test
+[INFO]    +- org.junit.jupiter:junit-jupiter:jar:5.12.2:test
+[INFO]    |  +- org.junit.jupiter:junit-jupiter-api:jar:5.12.2:test
+[INFO]    |  |  +- org.opentest4j:opentest4j:jar:1.3.0:test
+[INFO]    |  |  +- org.junit.platform:junit-platform-commons:jar:1.12.2:test
+[INFO]    |  |  \- org.apiguardian:apiguardian-api:jar:1.1.2:test
+[INFO]    |  +- org.junit.jupiter:junit-jupiter-params:jar:5.12.2:test
+[INFO]    |  \- org.junit.jupiter:junit-jupiter-engine:jar:5.12.2:test
+[INFO]    |     \- org.junit.platform:junit-platform-engine:jar:1.12.2:test
+[INFO]    +- org.mockito:mockito-core:jar:5.17.0:test
+[INFO]    |  +- net.bytebuddy:byte-buddy-agent:jar:1.17.8:test
+[INFO]    |  \- org.objenesis:objenesis:jar:3.3:test
+[INFO]    +- org.mockito:mockito-junit-jupiter:jar:5.17.0:test
+[INFO]    +- org.skyscreamer:jsonassert:jar:1.5.3:test
+[INFO]    |  \- com.vaadin.external.google:android-json:jar:0.0.20131108.vaadin1:test
+[INFO]    +- org.springframework:spring-core:jar:6.2.15:compile
+[INFO]    |  \- org.springframework:spring-jcl:jar:6.2.15:compile
+[INFO]    +- org.springframework:spring-test:jar:6.2.15:test
+[INFO]    \- org.xmlunit:xmlunit-core:jar:2.10.4:test
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  0.544 s
+[INFO] Finished at: 2026-01-17T22:38:52+05:30
+[INFO] ------------------------------------------------------------------------
+2026-01-17T17:08:52.556Z [INFO] [MavenBuildTool] Successfully got dependency tree of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:52.556Z [INFO] [MavenBuildTool] Getting Java version of /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse from pom.xml
+2026-01-17T17:08:52.556Z [INFO] [MavenBuildTool] Searching for pom.xml files in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse
+2026-01-17T17:08:52.557Z [INFO] [MavenBuildTool] Found pom.xml files: /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/pom.xml
+2026-01-17T17:08:52.557Z [INFO] [MavenBuildTool] Java version found in /Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse/pom.xml: 17
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object]
+2026-01-17T17:08:52.557Z [INFO] No target dependencies found for Spring Boot. Skipping target dependency validation
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Boot
+2026-01-17T17:08:52.557Z [WARN] No source dependencies found for Spring Framework. Skipping target dependency validation
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Framework
+2026-01-17T17:08:52.557Z [WARN] No source dependencies found for Spring Security. Skipping target dependency validation
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Spring Security
+2026-01-17T17:08:52.557Z [WARN] No source dependencies found for Jakarta EE. Skipping target dependency validation
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Jakarta EE
+2026-01-17T17:08:52.557Z [WARN] No source dependencies found for JUnit. Skipping target dependency validation
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object], group:JUnit
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, targets: [object Object], group:Java
+2026-01-17T17:08:52.557Z [INFO] validateAndUpdateTargets, userTargets: [object Object]
+2026-01-17T17:08:52.557Z [INFO] Target Java version: 21
+2026-01-17T17:08:52.557Z [INFO] [Environment] Running command (Java 21): java -version
+openjdk version "21.0.8" 2025-07-15
+OpenJDK Runtime Environment Homebrew (build 21.0.8)
+OpenJDK 64-Bit Server VM Homebrew (build 21.0.8, mixed mode, sharing)
+2026-01-17T17:08:52.625Z [INFO] [JdkEnvironment] Got real Java version: 21.0.8
+2026-01-17T17:08:52.626Z [INFO] Target JDK: {"name":"java","path":"/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/bin","version":"21"}
+2026-01-17T17:08:52.626Z [INFO] Upgrade options: {
+  "workingBranch": "appmod/java-upgrade-20260117170824",
+  "runTests": true,
+  "target": {
+    "javaVersion": "21",
+    "dependencies": [
+      {
+        "name": "Java",
+        "groupId": "java",
+        "artifactId": "*",
+        "version": "21",
+        "recipes": [
+          {
+            "id": "com.microsoft.java.UpgradeToJava21",
+            "name": "Upgrade from Java 8 to Java 21",
+            "description": "Migrate Java 8 to Java 21.",
+            "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava21",
+            "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava21` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 21 from any previous version larger than Java 8.\n"
+          }
+        ],
+        "supportedSources": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": ">=8 <21"
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "11",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava11",
+                "name": "Upgrade from Java 8 to Java 11",
+                "description": "Migrate Java 8 to Java 11.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <11"
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11"
+              }
+            ]
+          },
+          {
+            "name": "Java",
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "17",
+            "recipes": [
+              {
+                "id": "com.microsoft.java.UpgradeToJava17",
+                "name": "Upgrade from Java 8 to Java 17",
+                "description": "Migrate Java 8 to Java 17.",
+                "url": "https://docs.openrewrite.org/recipes/java/migrate/UpgradeToJava17",
+                "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.UpgradeToJava17` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 17 from any previous version larger than Java 8.\n"
+              }
+            ],
+            "supportedSources": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": ">=8 <17"
+              },
+              {
+                "name": "Java",
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "11",
+                "recipes": [
+                  {
+                    "id": "com.microsoft.java.UpgradeToJava11",
+                    "name": "Upgrade from Java 8 to Java 11",
+                    "description": "Migrate Java 8 to Java 11.",
+                    "url": "https://docs.openrewrite.org/recipes/java/migrate/java8tojava11",
+                    "content": "\n- Apply OpenRewrite recipe `org.openrewrite.java.migrate.Java8toJava11` in recipe lib `org.openrewrite.recipe:rewrite-migrate-java:2.31.1` to make initial code changes for upgrading Java project to Java 11 from any previous version larger than Java 8.\n"
+                  }
+                ],
+                "supportedSources": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": ">=8 <11"
+                  }
+                ],
+                "effects": [
+                  {
+                    "groupId": "java",
+                    "artifactId": "*",
+                    "version": "11"
+                  }
+                ]
+              }
+            ],
+            "effects": [
+              {
+                "groupId": "java",
+                "artifactId": "*",
+                "version": "17"
+              }
+            ]
+          }
+        ],
+        "effects": [
+          {
+            "groupId": "java",
+            "artifactId": "*",
+            "version": "21"
+          }
+        ]
+      }
+    ],
+    "jdk": {
+      "name": "java",
+      "path": "/opt/homebrew/Cellar/openjdk@21/21.0.8/libexec/openjdk.jdk/Contents/Home/bin",
+      "version": "21"
+    }
+  },
+  "guidelines": ""
+}
+2026-01-17T17:08:52.626Z [INFO] Project configuration and upgrade options initialized successfully.
+2026-01-17T17:08:52.636Z [INFO]  M pom.xml
+?? src/main/java/com/mehuljain/jobpulse/entity/
+
+2026-01-17T17:08:52.669Z [INFO] Saved working directory and index state On main: Stash changes before upgrade
+
+2026-01-17T17:08:52.687Z [INFO] There are  changed files found under "/Users/mehuljain/Desktop/JobPulse - AI Job Scraper + Email Alerts/JobPulse"
+2026-01-17T17:08:52.687Z [INFO] There are uncommitted changes in the project before upgrading, which have been stashed according to user setting "appModernization.uncommittedChangesAction".
+2026-01-17T17:08:52.687Z [INFO] working tree is cleaned.
+2026-01-17T17:08:52.687Z [INFO] Start prechecking...
+2026-01-17T17:09:02.603Z [INFO] Precheck completed successfully.
+2026-01-17T17:09:02.616Z [INFO] main
+
+2026-01-17T17:09:02.616Z [INFO] Create or reuse the working branch appmod/java-upgrade-20260117170824
+2026-01-17T17:09:02.640Z [ERROR] Switched to a new branch 'appmod/java-upgrade-20260117170824'
+
+2026-01-17T17:09:02.641Z [INFO] Switched the working branch from main to appmod/java-upgrade-20260117170824
+2026-01-17T17:09:02.641Z [INFO] Git working branch is set up.
+2026-01-17T17:09:02.651Z [INFO] bb1e4304ed7a38ce823c49baab92b2bf3393ea3f
+

@@ -14,8 +14,10 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import jakarta.mail.internet.MimeMessage;
 
+import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CopyOnWriteArrayList;
+import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 @Service
 @Slf4j
@@ -28,9 +30,9 @@ public class NotificationService {
     @Value("${spring.mail.username}")
     private String senderEmail;
 
-
-    private final List<Job> jobBuffer = new CopyOnWriteArrayList<>();
-
+    // 🛑 CHANGE: Use BlockingQueue instead of List
+    // This is designed exactly for "buffering" tasks safely.
+    private final BlockingQueue<Job> jobBuffer = new LinkedBlockingQueue<>();
 
     @EventListener
     public void handleNewJob(JobSavedEvent event) {
@@ -38,20 +40,23 @@ public class NotificationService {
         log.info("Buffered job: {}. Total pending: {}", event.getJob().getJobTitle(), jobBuffer.size());
     }
 
-
-    @Scheduled(fixedRate = 600000)
+    @Scheduled(fixedRate = 600000) // Runs every 10 minutes
     public void sendBufferedJobs() {
         if (jobBuffer.isEmpty()) {
             return;
         }
 
-        int jobCount = jobBuffer.size();
+
+        // It clears the buffer as it moves them, leaving zero gaps for data loss.
+        List<Job> batchToSend = new ArrayList<>();
+        jobBuffer.drainTo(batchToSend);
+
+        int jobCount = batchToSend.size();
         log.info("Creating digest email for {} jobs...", jobCount);
 
         List<User> users = userRepository.findAll();
 
-        // Build the email body ONCE
-        String emailBody = buildHtmlEmail(jobBuffer);
+        String emailBody = buildHtmlEmail(batchToSend);
 
         for (User user : users) {
             try {
@@ -60,10 +65,7 @@ public class NotificationService {
                 log.error("Failed to send digest to {}", user.getEmail());
             }
         }
-
-
-        jobBuffer.clear();
-        log.info("Buffer cleared.");
+        log.info("Batch sent successfully.");
     }
 
     private void sendHtmlEmail(User user, String htmlBody, int count) throws Exception {
@@ -83,20 +85,34 @@ public class NotificationService {
 
     private String buildHtmlEmail(List<Job> jobs) {
         StringBuilder html = new StringBuilder();
-        html.append("<html><body>");
+        html.append("<html><body style='font-family: Arial, sans-serif;'>");
         html.append("<h2>🚀 We found ").append(jobs.size()).append(" new jobs!</h2>");
-        html.append("<table style='border-collapse: collapse; width: 100%;'>");
-        html.append("<tr style='background-color: #f2f2f2;'><th style='padding: 8px; border: 1px solid #ddd;'>Role</th><th style='padding: 8px; border: 1px solid #ddd;'>Company</th><th style='padding: 8px; border: 1px solid #ddd;'>Link</th></tr>");
+
+        html.append("<table style='border-collapse: collapse; width: 100%; border: 1px solid #ddd;'>");
+        html.append("<tr style='background-color: #f2f2f2;'>");
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 20%;'>Role</th>");
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 15%;'>Company</th>");
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 50%;'>AI Summary</th>");
+        html.append("<th style='padding: 10px; border: 1px solid #ddd; width: 15%;'>Link</th>");
+        html.append("</tr>");
 
         for (Job job : jobs) {
             html.append("<tr>");
-            html.append("<td style='padding: 8px; border: 1px solid #ddd;'>").append(job.getJobTitle()).append("</td>");
-            html.append("<td style='padding: 8px; border: 1px solid #ddd;'>").append(job.getCompanyName()).append("</td>");
-            html.append("<td style='padding: 8px; border: 1px solid #ddd;'><a href='").append(job.getApplyUrl()).append("'>Apply</a></td>");
+            html.append("<td style='padding: 10px; border: 1px solid #ddd;'><b>").append(job.getJobTitle()).append("</b></td>");
+            html.append("<td style='padding: 10px; border: 1px solid #ddd;'>").append(job.getCompanyName()).append("</td>");
+
+            String summary = (job.getAiSummary() != null && !job.getAiSummary().isEmpty())
+                    ? job.getAiSummary()
+                    : "<i>Analysis Pending...</i>";
+
+            html.append("<td style='padding: 10px; border: 1px solid #ddd; font-size: 14px;'>").append(summary).append("</td>");
+            html.append("<td style='padding: 10px; border: 1px solid #ddd; text-align: center;'><a href='").append(job.getApplyUrl()).append("' style='background-color: #28a745; color: white; padding: 5px 10px; text-decoration: none; border-radius: 4px;'>Apply</a></td>");
             html.append("</tr>");
         }
 
-        html.append("</table></body></html>");
+        html.append("</table>");
+        html.append("<p style='font-size: 12px; color: #666;'>JobPulse AI Agent • Automated Digest</p>");
+        html.append("</body></html>");
         return html.toString();
     }
 }
